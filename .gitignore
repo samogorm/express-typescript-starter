@@ -1,8 +1,9 @@
 ## Misc
-node_modules
 .DS_STORE
 .env
 .vscode
+node_modules
+coverage
 
 ## Yarn
 yarn.lock

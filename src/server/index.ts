@@ -9,7 +9,7 @@ import RouteMiddleware from './../router/router.middleware';
 class Server {
   private readonly SERVER_STARTED = `Running API on port:`;
 
-  public start = (port: number | string): void => {
+  public start(port: number | string): void {
     const app = express();
     const routeMiddleware = new RouteMiddleware();
 
@@ -22,7 +22,11 @@ class Server {
 
     app.listen(port);
     console.log(`${this.SERVER_STARTED} ${port}`);
-  };
+  }
+
+  testAdd(a: number, b: number): number {
+    return a + b;
+  }
 }
 
 export default Server;
