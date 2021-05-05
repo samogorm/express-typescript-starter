@@ -1,15 +1,71 @@
-# 💻Express + TypeScript Starter
+# Express + TypeScript Starter
 
-### Description
+## Description
 
-A basic starter project to get up and running with Express and TypeScript. Feel free to take a copy and tweak to your needs.
+A basic starter project to get an API up and running with Express and TypeScript.
+
+## Uses
+
+* [Express](https://expressjs.com/)
+* [TypeScript](https://www.typescriptlang.org/)
+* [MongoDB](https://www.mongodb.com/)
+* [Jest](https://jestjs.io/)
+
+## Getting Started
+
+### System Requirements
+
+* Node 13.0.0+
+
+### Clone the Repository
+
+#### Clone with SSH:
+
+`git clone git@github.com:samogorm/express-typescript-starter.git`
+
+*or*
+
+### Clone with Https:
+
+`git clone https://github.com/samogorm/express-typescript-starter.git`
+
 
 ### Installation
 
-1. Clone the repository `git clone https://github.com/samogorm/express-typescript-starter.git`
-2. Navigate to the cloned project in your Terminal `cd path_to_project`
-3. Install dependencies by running `npm install`
-4. Add your environment variables to `.env` file (you can copy .env.example to get going)
-5. Run `npm run start:dev`
-6. Go to https://localhost:5001/api/v1
-7. If you see a message saying "OK!", you're all set!
+* Run `yarn install` to install node modules
+
+### Configuration
+
+* Create a `.env` file
+* Copy the contents of `.env.example` into the `.env` file
+* Customise the values
+
+### Usage
+
+* Run `yarn dev` to start the app locally
+* Go to https://localhost:[APP_PORT]/api/[APP_VERSION]
+* If you see a message saying `OK!`, then everything should be set up correctly
+
+### Linting
+
+Currently uses recommended eslint/tslint options provided by the `eslint-plugin` module. This can be configured in `.eslintrc`.
+
+* Run `yarn lint` to run the linter
+* Run `yarn lint:fix` to run the linter and fix any lint issues
+
+### Tests
+
+#### With Coverage
+
+* Run `yarn test`
+
+
+#### Without coverage
+
+* Run `yarn jest`
+
+### Builds
+
+The compiled JS build will be put into `build` directory, this can be configured in `tsconfig.json` with the `outDir` option.
+
+* Run `yarn build` to compile the project to JS
