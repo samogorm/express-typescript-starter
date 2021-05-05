@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
@@ -11,7 +9,7 @@ import RouteMiddleware from './../router/router.middleware';
 class Server {
   private readonly SERVER_STARTED = `Running API on port:`;
 
-  public start = (port: any) => {
+  public start = (port: number | string): void => {
     const app = express();
     const routeMiddleware = new RouteMiddleware();
 

@@ -1,5 +1,12 @@
+## Misc
 node_modules
-package-lock.json
 .DS_STORE
 .env
 .vscode
+
+## Yarn
+yarn.lock
+yarn-error.log
+
+## NPM
+package-lock.json
