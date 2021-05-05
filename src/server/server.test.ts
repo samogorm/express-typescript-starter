@@ -1,12 +1,11 @@
 import Server from './';
 
 describe('Server', () => {
-  describe('testAdd', () => {
-    it('run the test code', async () => {
-      const server = new Server();
-      const testSum = server.testAdd(5, 10);
+  describe('start', () => {
+    it('starts the server', async () => {
+      Server.start(3000);
 
-      expect(testSum).toBe(15);
+      // TODO: add expect
     });
   });
 });

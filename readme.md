@@ -43,7 +43,7 @@ A basic starter project to get an API up and running with Express and TypeScript
 ### Usage
 
 * Run `yarn dev` to start the app locally
-* Go to https://localhost:[APP_PORT]/api/[APP_VERSION]
+* Go to http://localhost:[APP_PORT]/api/[APP_VERSION]
 * If you see a message saying `OK!`, then everything should be set up correctly
 
 ### Linting

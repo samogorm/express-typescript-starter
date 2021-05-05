@@ -2,7 +2,7 @@ import express from 'express';
 
 const Router = express.Router();
 
-Router.route('/').get(async (req, res) => {
+Router.route('/').get((req, res) => {
   res.send('OK!');
 });
 
