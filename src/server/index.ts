@@ -16,16 +16,12 @@ class Server {
     app.use(cors());
     app.use(routeMiddleware.logRoute);
     app.use(bodyParser.json());
-    app.use('/api/v1', Router);
+    app.use(`/api/${process.env.APP_PORT}`, Router);
 
     mongoose.connect(`${process.env.MONGO_LOCAL_CONN_URL}${process.env.MONGO_DB}` || '', { useNewUrlParser: true, useUnifiedTopology: true });
 
     app.listen(port);
     console.log(`${this.SERVER_STARTED} ${port}`);
-  }
-
-  testAdd(a: number, b: number): number {
-    return a + b;
   }
 }
 
