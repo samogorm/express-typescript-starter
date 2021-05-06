@@ -1,10 +1,11 @@
 import express from 'express';
 
+import Logger from '../utils/logger';
+import colours from './../constants/colours';
+
 class RouteMiddleware {
   logRoute(request: express.Request, response: express.Response, next: () => void): void {
-    console.log('REQUEST: ');
-    console.log(`${request.method} ${request.path}`);
-    console.log(`Status Code: ${response.statusCode}`);
+    Logger.text(`REQUEST: ${request.method} ${request.path} [${response.statusCode}]`, colours.foreground.green);
 
     next();
   }

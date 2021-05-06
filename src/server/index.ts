@@ -4,10 +4,14 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 
 import Router from './../router';
-import RouteMiddleware from './../router/router.middleware'
+import RouteMiddleware from './../router/router.middleware';
+import Logger from '../utils/logger';
+import colours from './../constants/colours';
 
 class Server {
   static start(port: number | string): void {
+    Logger.text(`Starting ${process.env.NODE_ENV} server...`, colours.foreground.blue);
+
     const app = express();
     const routeMiddleware = new RouteMiddleware();
 
@@ -22,8 +26,8 @@ class Server {
     });
 
     app.listen(port);
-    console.log(`Running API on port: ${port}`);
-    console.log(`Visit http://localhost:${port}/api/v${process.env.APP_VERSION}`);
+    Logger.text(`Running API on port: ${port}`, colours.foreground.blue);
+    Logger.text(`Visit: http://localhost:${port}/api/v${process.env.APP_VERSION}`, colours.foreground.blue);
   }
 }
 
